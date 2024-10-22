@@ -64,7 +64,7 @@ const Posting = () => {
               <h3 className="font-bold">{post.title}</h3>
               <button 
                 className="btn btn-sm" 
-                onClick={() => openModal(post)}
+                onClick={() => openModal(post, index)}
               >
                 Edit
               </button>
