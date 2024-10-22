@@ -30,7 +30,7 @@ const Posting = () => {
   };
 
   const handleSavePosting = (updatedPost) => { // is run when modal is closed
-    // update postingsData with updatedPost
+    // update postingData with updatedPost
     const updatedPostingData = { ...postingData };
     updatedPostingData[activeTab][modalIndex] = updatedPost;
     setPostingData(updatedPostingData);
@@ -59,7 +59,7 @@ const Posting = () => {
       <div className="mt-5">
         <h2 className="text-lg font-bold">{activeTab}</h2>
         <ul className="list-disc pl-5">
-          {postingsData[activeTab].map((post, index) => ( // retrieves data from postingsData
+          {postingData[activeTab].map((post, index) => ( // retrieves data from postingData
             <li key={index} className="flex flex-col justify-between items-start">
               <h3 className="font-bold">{post.title}</h3>
               <button 
