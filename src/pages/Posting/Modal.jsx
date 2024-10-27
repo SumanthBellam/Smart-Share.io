@@ -18,7 +18,7 @@ const Modal = ({ isOpen, onClose, post, onSave }) => {
   
 
     const addTag = () => {
-        if (tagInput.trim() !== '') {
+        if (tagInput.trim() !== '') { // prevents empty tag
             setUpdatedPost((prevPost) => ({
                 ...prevPost,
                 tags: [...prevPost.tags, tagInput],

@@ -5,6 +5,7 @@ import { createHashRouter, RouterProvider } from "react-router-dom";
 import Profile from  './pages/Profile/Profile'
 import Home from './pages/Home/Home'
 import Posting from './pages/Posting/Posting'
+import Support from './pages/Support/Support'
 
 import "@fontsource/roboto/300.css";
 import '@fontsource/roboto/400.css';
@@ -23,6 +24,10 @@ const router = createHashRouter([
   {
     path: "/posting",
     element: <Posting />,
+  },
+  {
+    path: "/support",
+    element: <Support />,
   }
 ]);
 
