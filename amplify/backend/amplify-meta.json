@@ -1,0 +1,15 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-smartshare-dev-97e13-authRole",
+      "UnauthRoleArn": "arn:aws:iam::577638391993:role/amplify-smartshare-dev-97e13-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::577638391993:role/amplify-smartshare-dev-97e13-authRole",
+      "Region": "us-west-1",
+      "DeploymentBucketName": "amplify-smartshare-dev-97e13-deployment",
+      "UnauthRoleName": "amplify-smartshare-dev-97e13-unauthRole",
+      "StackName": "amplify-smartshare-dev-97e13",
+      "StackId": "arn:aws:cloudformation:us-west-1:577638391993:stack/amplify-smartshare-dev-97e13/4de93630-89b5-11ef-8b72-0678e7a09603",
+      "AmplifyAppId": "d1yh99xw16igst"
+    }
+  }
+}

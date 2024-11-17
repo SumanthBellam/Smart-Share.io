@@ -1,1 +1,0 @@
-// This can be the landing page that introduces the app to the user.

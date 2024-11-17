@@ -4,9 +4,12 @@ import SideBar from './SideBar'
 const AppLayout = (props) => {
   const { children } = props;
   return (
-    <div>
+    <div className="flex">
       <SideBar />
-      { children }
+      <div className="ml-10 mt-5">
+        { children }
+      </div>
+      
     </div>
   )
 }

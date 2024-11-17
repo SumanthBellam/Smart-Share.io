@@ -4,6 +4,10 @@ import React from 'react'
 const Home = () => {
   return (
     <div>
+
+      <h1>Here's your Feed</h1>
+
+      
       <div className="card bg-base-100 w-96 shadow-xl">
         <figure>
           <img
