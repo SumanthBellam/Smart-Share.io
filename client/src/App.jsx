@@ -6,6 +6,7 @@ import Profile from  './pages/Profile/Profile'
 import Home from './pages/Home/Home'
 import Posting from './pages/Posting/Posting'
 import SearchBar from './components/SearchBar';
+import Landing from './pages/Landing/Landing';
 
 import "@fontsource/roboto/300.css";
 import '@fontsource/roboto/400.css';
@@ -24,6 +25,10 @@ const router = createHashRouter([
   {
     path: "/posting",
     element: <Posting />,
+  },
+  {
+    path: "/landing",
+    element: <Landing />,
   }
 ]);
 
