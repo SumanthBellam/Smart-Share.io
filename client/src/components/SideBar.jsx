@@ -2,11 +2,31 @@ import React, { useState } from 'react'
 import { AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
+/**
+ * A sidebar component that can be toggled open and closed.
+ * Clicking on a link, or clicking the 
+ * @returns A sidebar component as a JSX element.
+ */
+
 const SideBar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
+  // const toggleSidebar = () => {
+  //   if(isSidebarOpen) {
+  //     setIsSidebarOpen(false);
+  //   } else {
+  //     setIsSidebarOpen(true);
+  //   }
+  //   console.log("we have set isSidebarOpen to " + isSidebarOpen)
+  // }
+
+/**
+ * Toggles the sidebar open or closed based on the provided boolean value.
+ * @param {boolean} boolValue - A boolean indicating whether the sidebar should be open (true) or closed (false).
+ */
+  const toggleSidebar = (boolValue) => {
+    setIsSidebarOpen(boolValue);
+    console.log("we have set isSidebarOpen to " + isSidebarOpen)
   }
 
   return (
@@ -17,31 +37,24 @@ const SideBar = () => {
           type="checkbox" 
           className="drawer-toggle" 
           checked={isSidebarOpen} 
-          onChange={toggleSidebar}
+          onChange={setIsSidebarOpen}
         /> 
-        {/* <div className="hidden lg:visible">
-          <div className="drawer-side">
-              <label htmlFor="my-drawer-3" aria-label="open sidebar" className="drawer-overlay"></label>
-              <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-                <li><a>Sidebar Item 2</a></li>
-              </ul>
-            </div>
-        </div> */}
         <div className="drawer-content flex flex-col lg:hidden">
           <div className="flex-none">
-            <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost text-black">
+            <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost text-black" onClick={() => toggleSidebar(true)}>
               <AiOutlineMenu size={30}/>
             </label>
           </div>
         </div>
 
         <div className="drawer-side">
-          <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay" onClick={toggleSidebar}></label>
+          <label htmlFor="my-drawer-3" className="drawer-overlay" onClick={() => toggleSidebar(false)}></label>
           <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
             {/* Sidebar content here */}
-            {/* <li onClick={toggleSidebar}><Link to="/">Home</Link></li> */}
-            <li><a>Sidebar Item 1</a></li>
-            <li><a>Sidebar Item 2</a></li>
+            <li onClick={() => toggleSidebar(false)}><Link to="/">Home</Link></li>
+            <li onClick={() => toggleSidebar(false)}><Link to={"/profile"}>Profile</Link></li>
+            <li onClick={() => toggleSidebar(false)}><Link to={"/landing"}>Landing</Link></li>
+
           </ul>
         </div>
       </div>
